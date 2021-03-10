@@ -32,7 +32,7 @@
         app:layout_constraintVertical_bias="0.192" />
 
     <Button
-        android:id="@+id/buttonSend"
+        android:id="@+id/button_send"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="send to server"
@@ -43,15 +43,38 @@
         app:layout_constraintVertical_bias="0.862" />
 
     <TextView
-        android:id="@+id/textViewAnswer"
-        android:layout_width="291dp"
-        android:layout_height="123dp"
+        android:id="@+id/textView_answer"
+        android:layout_width="289dp"
+        android:layout_height="99dp"
+        android:gravity="center_horizontal"
         android:text="answer from server"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.337" />
+
+    <Button
+        android:id="@+id/button_sort"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="sort number"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.762" />
+
+    <TextView
+        android:id="@+id/textView_sortedNumbers"
+        android:layout_width="270dp"
+        android:layout_height="71dp"
+        android:text="sorted mat. nr."
         android:gravity="center_horizontal"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.358" />
+        app:layout_constraintVertical_bias="0.536" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

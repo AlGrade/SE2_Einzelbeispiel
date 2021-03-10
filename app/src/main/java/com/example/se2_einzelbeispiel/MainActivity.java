@@ -1,12 +1,10 @@
 package com.example.se2_einzelbeispiel;
 
 import androidx.appcompat.app.AppCompatActivity;
-
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
-
 
 public class MainActivity extends AppCompatActivity {
 
@@ -16,9 +14,10 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         TextView numberInput = findViewById(R.id.numberInput);
-        TextView answerFromServer = findViewById(R.id.textViewAnswer);
+        TextView answerFromServer = findViewById(R.id.textView_answer);
+        TextView sortedNumbers = findViewById(R.id.textView_sortedNumbers);
 
-        final Button sendButton = findViewById(R.id.buttonSend);
+        final Button sendButton = findViewById(R.id.button_send);
         sendButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -35,7 +34,16 @@ public class MainActivity extends AppCompatActivity {
                     answerFromServer.setText("connection not possible");
                     e.printStackTrace();
                 }
+            }
+        });
 
+        final Button sortButton = findViewById(R.id.button_sort);
+        sortButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                NumberSorter sorter = new NumberSorter(numberInput.getText().toString());
+                sortedNumbers.setText(sorter.sortedNumber);
             }
         });
 
