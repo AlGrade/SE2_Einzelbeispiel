@@ -72,7 +72,7 @@ public class NumberSorter {
 
     /**
      * concatenates two lists of integers and converts it to a string
-     * @return
+     * @return the final string that will be shown in the TextView of the app
      */
     public String concat(ArrayList<Integer> list1, ArrayList<Integer> list2) {
         ArrayList<Integer> mergedList = new ArrayList<>();
